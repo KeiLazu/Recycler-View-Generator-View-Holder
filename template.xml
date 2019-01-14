@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<template
+	format="5"
+	revision="1"
+	name="Recycler View View Holder"
+	minApi="19"
+	minBuildApi="19"
+	description="Create View Holder for Recycler View">
+
+	<category value="Recycler View"/>
+	
+	<parameter
+		id="viewHolderName"
+		name="View Holder Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="BasicViewHolder"
+		help="The name of the view holder class to create, do not include 'ViewHolder', only the name is enough"
+	/>
+	
+	<parameter
+		id="isHeader"
+		name="Header needed"
+		type="boolean"
+		default="false"
+		help="this will automatically create header view holder if this value is true"
+	/>
+	
+	<parameter 
+		id="isFooter"
+		name="Footer needed"
+		type="boolean"
+		default="false"
+		help="this will automatically create footer view holder if this value is true"
+	/>
+	
+	<parameter
+		id="packageName"
+		name="View Holder Package Name"
+		type="string"
+		constraints="package"
+		default="com.mycompany.myapp"
+	/>
+	
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+	
+</template>
